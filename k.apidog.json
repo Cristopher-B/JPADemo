@@ -1,0 +1,728 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "k",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "projectSetting": {
+    "id": "1158885",
+    "auth": {},
+    "securityScheme": {},
+    "gateway": [],
+    "language": "es-ES",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "servers": [
+      {
+        "id": "default",
+        "name": "Servidor predeterminado",
+        "moduleId": 1016743
+      }
+    ],
+    "cloudMock": {
+      "security": "free",
+      "enable": false,
+      "tokenKey": "apidogToken"
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 5989332,
+      "auth": {},
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": "",
+          "fields": []
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "moduleId": 1016743,
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "GET todos",
+          "api": {
+            "id": "26919757",
+            "method": "get",
+            "path": "http://localhost:8080/demoJPA/persons",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "174046163",
+                "code": 200,
+                "name": "Éxito",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "Correcto",
+                "data": "[{\"id\":1,\"name\":\"Cristopher\",\"lastName\":\"Balseca\",\"age\":24},{\"id\":2,\"name\":\"Juan\",\"lastName\":\"Perez\",\"age\":22}]",
+                "responseId": "174046163"
+              }
+            ],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": true,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 10,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1016743,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "GET por ID",
+          "api": {
+            "id": "26919766",
+            "method": "get",
+            "path": "http://localhost:8080/demoJPA/persons/1",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "109654467",
+                "code": 200,
+                "name": "Éxito",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "Correcto",
+                "data": "{\"id\":1,\"name\":\"Cristopher\",\"lastName\":\"Balseca\",\"age\":24}",
+                "responseId": "109654467"
+              }
+            ],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": true,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 30,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1016743,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Crear Persona",
+          "api": {
+            "id": "26919869",
+            "method": "post",
+            "path": "http://localhost:8080/demoJPA/persons",
+            "parameters": {
+              "query": [
+                {
+                  "required": false,
+                  "description": "",
+                  "type": "string",
+                  "id": "H7de19aQ66",
+                  "enable": true,
+                  "name": "Content-Type",
+                  "example": "application/json"
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "196961176",
+                "code": 200,
+                "name": "Éxito",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "Correcto",
+                "data": "Persona creada correctamente",
+                "responseId": "196961176"
+              }
+            ],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {}
+              },
+              "required": true,
+              "mediaType": "",
+              "examples": [
+                {
+                  "mediaType": "application/json",
+                  "value": "{\r\n    \"name\": \"Maria\",\r\n    \"lastName\": \"Lopez\",\r\n    \"age\": 21\r\n}"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 40,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1016743,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "DEL persona",
+          "api": {
+            "id": "26919970",
+            "method": "delete",
+            "path": "http://localhost:8080/demoJPA/persons/52",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "142751328",
+                "code": 200,
+                "name": "Éxito",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "Correcto",
+                "data": "Persona eliminada correctamente",
+                "responseId": "142751328"
+              }
+            ],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": true,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 50,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1016743,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Actualizar",
+          "api": {
+            "id": "26920495",
+            "method": "patch",
+            "path": "http://localhost:8080/demoJPA/2",
+            "parameters": {
+              "query": [
+                {
+                  "required": false,
+                  "description": "",
+                  "type": "string",
+                  "id": "b8OKnQiNPl",
+                  "enable": true,
+                  "name": "Content-Type",
+                  "example": "application/json"
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "110013898",
+                "code": 200,
+                "name": "Éxito",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "Correcto",
+                "data": "{\"id\":2,\"name\":\"Juan\",\"lastName\":\"Perez\",\"age\":23}",
+                "responseId": "110013898"
+              }
+            ],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {}
+              },
+              "required": true,
+              "mediaType": "",
+              "examples": [
+                {
+                  "mediaType": "application/json",
+                  "value": "{\r\n    \"age\":23\r\n}"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 60,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1016743,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "responseCollection": [
+    {
+      "_databaseId": 1261791,
+      "updatedAt": "2025-12-19T18:00:14.000Z",
+      "name": "Root",
+      "type": "root",
+      "children": [],
+      "moduleId": 1016743,
+      "parentId": 0,
+      "id": 1261791,
+      "ordering": [],
+      "items": []
+    }
+  ],
+  "schemaCollection": [
+    {
+      "id": 2888291,
+      "name": "Root",
+      "visibility": "SHARED",
+      "moduleId": 1016743,
+      "items": [],
+      "ordering": []
+    }
+  ],
+  "securitySchemeCollection": [
+    {
+      "id": 954487,
+      "moduleId": 1016743,
+      "name": "Root",
+      "items": [],
+      "ordering": []
+    }
+  ],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.9099082"
+      ],
+      "items": []
+    }
+  ],
+  "apiTestCaseCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "items": []
+    }
+  ],
+  "testCaseReferences": [],
+  "environments": [],
+  "commonScripts": [],
+  "databaseConnections": [],
+  "globalVariables": [],
+  "commonParameters": null,
+  "customFunctions": [],
+  "projectTestCaseCategories": [
+    {
+      "id": 692574,
+      "name": "Positivo",
+      "description": "Entradas válidas y resultados esperados correctos, que representan un uso típico."
+    },
+    {
+      "id": 692575,
+      "name": "Negativo",
+      "description": "Entradas negativas o no válidas, como campos faltantes, tipos incorrectos, métodos no admitidos, etc."
+    },
+    {
+      "id": 692576,
+      "name": "Límite",
+      "description": "Condiciones extremas o de borde, como longitud máxima de cadena, valores vacíos, cero, null, etc."
+    },
+    {
+      "id": 692577,
+      "name": "Seguridad",
+      "description": "Casos que pueden exponer riesgos de seguridad del API."
+    },
+    {
+      "id": 692578,
+      "name": "Otros",
+      "description": "Casos no clasificados en categorías existentes."
+    }
+  ],
+  "projectTestCaseTags": [
+    {
+      "id": 2107193,
+      "name": "Solo campos obligatorios",
+      "description": "Enviar solo los campos obligatorios con valores válidos, omitiendo todos los opcionales, para probar la solicitud mínima válida."
+    },
+    {
+      "id": 2107194,
+      "name": "Semántica válida",
+      "description": "Usar valores sintácticamente correctos que también tengan sentido en la lógica de negocio o el contexto del dominio."
+    },
+    {
+      "id": 2107195,
+      "name": "Cobertura de combinaciones de enum",
+      "description": "Para todos los parámetros de tipo enumeración, aplicar diseño ortogonal para construir sistemáticamente combinaciones de casos de prueba de parámetros y sus valores de enum, con el fin de cubrir los enums."
+    },
+    {
+      "id": 2107196,
+      "name": "Otros casos positivos",
+      "description": "Proporcionar entradas realistas y válidas que cumplan la especificación del API, produciendo el resultado correcto y esperado."
+    },
+    {
+      "id": 2107197,
+      "name": "Campos obligatorios ausentes",
+      "description": "Omitir uno o más campos obligatorios en el cuerpo o parámetros de la solicitud."
+    },
+    {
+      "id": 2107198,
+      "name": "Valores no válidos",
+      "description": "Proporcionar valores con tipo y formato correctos, pero lógicamente no válidos para el campo."
+    },
+    {
+      "id": 2107199,
+      "name": "Errores de tipo",
+      "description": "Usar valores con tipos de datos incorrectos, como enviar una cadena en lugar de un entero."
+    },
+    {
+      "id": 2107200,
+      "name": "Errores de formato",
+      "description": "Proporcionar valores con un formato incorrecto, p. ej., patrón de fecha erróneo, dirección de correo mal formada."
+    },
+    {
+      "id": 2107201,
+      "name": "Errores semánticos",
+      "description": "Usar valores sintáctica y formalmente correctos que sean lógicamente imposibles o violen reglas del dominio."
+    },
+    {
+      "id": 2107202,
+      "name": "Otros casos negativos",
+      "description": "Proporcionar entradas inválidas o inesperadas que deberían activar el manejo de errores o el rechazo por parte del API."
+    },
+    {
+      "id": 2107203,
+      "name": "Nulo",
+      "description": "Debe ser el literal JSON `null` (no vacío, no \"null\")."
+    },
+    {
+      "id": 2107204,
+      "name": "Cero",
+      "description": "Debe ser el literal numérico 0."
+    },
+    {
+      "id": 2107205,
+      "name": "Valores vacíos",
+      "description": "Debe ser \"\"."
+    },
+    {
+      "id": 2107206,
+      "name": "Valores máximos",
+      "description": "Proporcionar los valores mínimo y máximo permitidos exactos para campos numéricos o de fecha."
+    },
+    {
+      "id": 2107207,
+      "name": "Valores mínimos",
+      "description": "Proporcionar los valores mínimo y máximo permitidos exactos para campos numéricos o de fecha."
+    },
+    {
+      "id": 2107208,
+      "name": "Desbordamiento",
+      "description": "Proporcionar valores justo más allá de los límites mínimo o máximo permitidos."
+    },
+    {
+      "id": 2107209,
+      "name": "Subdesbordamiento",
+      "description": "Proporcionar valores justo más allá de los límites mínimo o máximo permitidos."
+    },
+    {
+      "id": 2107210,
+      "name": "Cadenas demasiado largas",
+      "description": "Proporcionar cadenas más largas que la longitud máxima permitida, o más cortas que la longitud mínima requerida."
+    },
+    {
+      "id": 2107211,
+      "name": "Cadenas demasiado cortas",
+      "description": "Proporcionar cadenas más largas que la longitud máxima permitida, o más cortas que la longitud mínima requerida."
+    },
+    {
+      "id": 2107212,
+      "name": "Autorización a nivel de objeto rota",
+      "description": "Los usuarios acceden o manipulan objetos de datos sin la autorización adecuada."
+    },
+    {
+      "id": 2107213,
+      "name": "Control de acceso",
+      "description": "Restringir los recursos y acciones a los que los usuarios pueden acceder según roles, permisos o atributos."
+    },
+    {
+      "id": 2107214,
+      "name": "Fallos de autenticación",
+      "description": "La autenticación es débil, está mal configurada o se evita, permitiendo acceso no autorizado."
+    },
+    {
+      "id": 2107215,
+      "name": "Inyección SQL",
+      "description": "Insertar código SQL malicioso en entradas para probar vulnerabilidades de inyección SQL."
+    },
+    {
+      "id": 2107216,
+      "name": "Inyección XSS",
+      "description": "Inyectar JavaScript o etiquetas HTML para probar vulnerabilidades de XSS."
+    },
+    {
+      "id": 2107217,
+      "name": "Entrada fuzz",
+      "description": "Enviar cargas útiles grandes o generadas aleatoriamente para probar validación de entrada y estabilidad."
+    },
+    {
+      "id": 2107218,
+      "name": "Inyección de comandos",
+      "description": "Insertar comandos de shell en entradas para probar vulnerabilidades de ejecución de comandos."
+    },
+    {
+      "id": 2107219,
+      "name": "Inyección JSON",
+      "description": "Insertar estructuras JSON maliciosas o inesperadas para probar el análisis y validación."
+    },
+    {
+      "id": 2107220,
+      "name": "Inyección NoSQL",
+      "description": "Proporcionar consultas u operadores específicos de NoSQL para probar inyección."
+    },
+    {
+      "id": 2107221,
+      "name": "Otros",
+      "description": "Casos no clasificados en categorías existentes."
+    }
+  ],
+  "projectAssociations": [],
+  "moduleSettings": [
+    {
+      "id": "1016743",
+      "name": "Módulo predeterminado",
+      "description": "",
+      "moduleVariables": [],
+      "openApiInfo": {}
+    }
+  ]
+}
